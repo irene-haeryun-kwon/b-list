@@ -3,15 +3,13 @@ package io.github.blist;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
-
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
 import com.google.android.material.tabs.TabLayout;
 
 /* Modified at
-    Nov 28, 2019 */
+    Nov 29, 2019 */
 public class BListActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
