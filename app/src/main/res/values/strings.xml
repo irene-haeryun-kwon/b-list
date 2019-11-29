@@ -1,3 +1,8 @@
+<!-- Modified at Nov 28, 2019 -->
 <resources>
-    <string name="app_name">b-list</string>
+
+    <string name="app_name">Bucket List</string>
+    <string name="tab_a_label">To do</string>
+    <string name="tab_b_label">Completed</string>
+
 </resources>
