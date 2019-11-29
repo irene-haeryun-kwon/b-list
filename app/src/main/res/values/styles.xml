@@ -22,6 +22,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginBottom">20dp</item>
+        <item name="tabRippleColor">@color/colorPrimary</item>
     </style>
 
     <!-- b_list_details -->
@@ -89,6 +90,63 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:choiceMode">singleChoice</item>
         <item name="android:divider">@android:color/transparent</item>
+    </style>
+
+    <!-- login -->
+    <style name="LoginContainer">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="LogoText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:text">@string/app_short_name</item>
+        <item name="android:fontFamily">@font/aldrich</item>
+        <item name="android:layout_marginBottom">50dp</item>
+    </style>
+
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">330dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+
+    <style name="TextInputEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">text</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="TextInputEditText.Password">
+        <item name="android:inputType">textPassword</item>
+    </style>
+
+    <style name="LoginButton">
+        <item name="android:layout_width">325dp</item>
+        <item name="android:layout_height">65dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="TextButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="TextButton.Label">
+        <item name="android:textColor">@color/colorGeneralText</item>
+        <item name="android:layout_marginTop">30dp</item>
     </style>
 
 </resources>
