@@ -57,6 +57,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/add_button"
         android:text="Add"
+        android:onClick="onAddButtonClick"
         style="@style/LoginButton" />
 
 </LinearLayout>

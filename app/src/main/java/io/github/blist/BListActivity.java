@@ -18,6 +18,7 @@ public class BListActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private ViewPagerAdapter viewPagerAdapter;
     private Toolbar toolbar;
+    private BListDB db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,8 @@ public class BListActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.view_pager);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        db = new BListDB(this);
 
         setUpViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
@@ -46,6 +49,15 @@ public class BListActivity extends AppCompatActivity {
         if (id == R.id.add) {
             Intent i = new Intent(getBaseContext(), BListAddActivity.class);
             startActivity(i);
+        }
+
+        if (id == R.id.remove_all) {
+            try {
+                db.deleteAllBList();
+                recreate();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
 
         return super.onOptionsItemSelected(item);
