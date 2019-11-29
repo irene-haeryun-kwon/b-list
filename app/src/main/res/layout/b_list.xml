@@ -16,14 +16,14 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            style="@style/ToolbarStyle" />
+            style="@style/Toolbar" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
         app:tabIndicatorHeight="3dp"
-        style="@style/TabStyle">
+        style="@style/Tab">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"

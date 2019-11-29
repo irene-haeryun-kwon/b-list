@@ -37,7 +37,7 @@ public class BListDB {
             db.execSQL("CREATE TABLE blist (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
                     "title VARCHAR NOT NULL, date DATE, budget DECIMAL, completed BOOLEAN)");
             db.execSQL("INSERT INTO blist (title, date, budget, completed) " +
-                    "VALUES ('Traveling to Jeju Island', '2020-5-26', '2000.00', 'false')");
+                    "VALUES ('Traveling to Jeju Island', '2020-05-26', '2000.00', 'false')");
         }
 
         @Override

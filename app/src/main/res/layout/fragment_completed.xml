@@ -10,6 +10,6 @@
 
     <ListView
         android:id="@+id/completed_listview"
-        style="@style/ListviewStyle" />
+        style="@style/Listview" />
 
 </LinearLayout>

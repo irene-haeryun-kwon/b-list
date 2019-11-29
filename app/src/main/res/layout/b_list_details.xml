@@ -12,24 +12,38 @@
         android:id="@+id/b_list_details_cardview"
         app:contentPaddingTop="25dp"
         app:contentPaddingLeft="25dp"
-        style="@style/CardviewStyle">
+        style="@style/Cardview">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        <LinearLayout style="@style/CardInfoContainer">
 
             <TextView
                 android:id="@+id/title"
-                style="@style/CardInfoStyle" />
+                style="@style/CardInfo.Title" />
 
-            <TextView
-                android:id="@+id/date"
-                style="@style/CardInfoStyle" />
+            <LinearLayout
+                style="@style/CardTitleInfoContainer">
+                <ImageView
+                    android:src="@drawable/calendar"
+                    style="@style/CardImageView" />
+                <TextView
+                    android:text="Complete by"
+                    style="@style/CardExtraInfo" />
+                <TextView
+                    android:id="@+id/date"
+                    style="@style/CardInfo" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/budget"
-                style="@style/CardInfoStyle" />
+            <LinearLayout style="@style/CardExtraInfoContainer">
+                <ImageView
+                    android:src="@drawable/money"
+                    style="@style/CardImageView" />
+                <TextView
+                    android:text="Budget"
+                    style="@style/CardExtraInfo" />
+                <TextView
+                    android:id="@+id/budget"
+                    style="@style/CardInfo" />
+            </LinearLayout>
 
         </LinearLayout>
 

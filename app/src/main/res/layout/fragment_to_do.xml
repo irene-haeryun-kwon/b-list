@@ -10,6 +10,6 @@
 
     <ListView
         android:id="@+id/to_do_listview"
-        style="@style/ListviewStyle" />
+        style="@style/Listview" />
 
 </LinearLayout>

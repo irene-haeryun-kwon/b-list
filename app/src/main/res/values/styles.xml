@@ -1,6 +1,7 @@
 <resources>
 
     <!-- Modified at Nov 29, 2019 -->
+    <!-- App theme -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -10,38 +11,79 @@
     </style>
 
     <!-- b_list -->
-    <style name="ToolbarStyle" parent="Widget.MaterialComponents.Toolbar">
+    <style name="Toolbar" parent="Widget.MaterialComponents.Toolbar">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">?attr/actionBarSize</item>
         <item name="titleTextColor">@color/white</item>
     </style>
 
-    <style name="TabStyle" parent="Widget.MaterialComponents.TabLayout">
+    <style name="Tab" parent="Widget.MaterialComponents.TabLayout">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginBottom">20dp</item>
     </style>
 
     <!-- b_list_details -->
-    <style name="CardviewStyle" parent="Widget.MaterialComponents.CardView">
+    <style name="Cardview" parent="Widget.MaterialComponents.CardView">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">130dp</item>
+        <item name="android:layout_height">150dp</item>
         <item name="cardCornerRadius">5dp</item>
         <item name="cardElevation">5dp</item>
         <item name="android:layout_marginTop">5dp</item>
         <item name="android:layout_marginBottom">15dp</item>
         <item name="android:layout_marginLeft">15dp</item>
         <item name="android:layout_marginRight">15dp</item>
+        <item name="android:maxLines">1</item>
     </style>
 
-    <style name="CardInfoStyle">
+    <style name="CardInfoContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="CardTitleInfoContainer">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="CardInfo">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="CardInfo.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorGeneralText</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="CardImageView">
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">5dp</item>
+    </style>
+
+    <style name="CardExtraInfoContainer">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="CardExtraInfo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_marginRight">5dp</item>
     </style>
 
     <!-- fragment_to_do & fragment_completed -->
-    <style name="ListviewStyle">
+    <style name="Listview">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:choiceMode">singleChoice</item>
