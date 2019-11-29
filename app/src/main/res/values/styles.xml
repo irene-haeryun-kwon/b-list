@@ -8,10 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:fontFamily">@font/poppins_medium</item>
         <item name="android:textColor">@color/colorGeneralText</item>
+        <item name="android:textColorSecondary">@color/white</item> <!-- Menu color -->
     </style>
 
     <!-- b_list -->
-    <style name="Toolbar" parent="Widget.MaterialComponents.Toolbar">
+    <style name="Toolbar" parent="Widget.AppCompat.Toolbar">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">?attr/actionBarSize</item>
         <item name="titleTextColor">@color/white</item>

@@ -41,7 +41,7 @@ public class BListActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.more_icon) {
+        if (id == R.id.add) {
             return true;
         }
 
