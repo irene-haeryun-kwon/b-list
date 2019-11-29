@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- Modified at Nov 28, 2019 -->
+<!-- Modified at Nov 29, 2019 -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -16,17 +16,14 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:titleTextColor="@color/white" />
+            style="@style/ToolbarStyle" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:tabIndicatorHeight="3dp">
+        app:tabIndicatorHeight="3dp"
+        style="@style/TabStyle">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
