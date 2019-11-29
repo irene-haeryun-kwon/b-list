@@ -2,8 +2,7 @@
 <!-- Modified at Nov 29, 2019 -->
 <resources>
 
-    <string name="app_name">Bucket List</string>
-    <string name="app_short_name">b:list</string>
+    <string name="app_name">b:list</string>
     <string name="tab_a_label">To do</string>
     <string name="tab_b_label">Completed</string>
     <string name="copyright">© 2019</string>

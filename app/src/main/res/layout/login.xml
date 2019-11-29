@@ -3,19 +3,19 @@
 <!-- Modified at Nov 29, 2019 -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/LoginContainer">
+    style="@style/Container.Login">
 
     <TextView
         android:id="@+id/logo_text"
         style="@style/LogoText" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/title_text_input"
+        android:id="@+id/user_text_input"
         android:hint="Username"
         style="@style/TextInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/title_edit_text"
+            android:id="@+id/user_edit_text"
             style="@style/TextInputEditText" />
 
     </com.google.android.material.textfield.TextInputLayout>

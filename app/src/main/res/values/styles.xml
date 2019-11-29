@@ -11,6 +11,13 @@
         <item name="android:textColorSecondary">@color/white</item> <!-- Menu color -->
     </style>
 
+    <!-- General -->
+    <style name="Container">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
     <!-- b_list -->
     <style name="Toolbar" parent="Widget.AppCompat.Toolbar">
         <item name="android:layout_width">match_parent</item>
@@ -92,11 +99,8 @@
         <item name="android:divider">@android:color/transparent</item>
     </style>
 
-    <!-- login -->
-    <style name="LoginContainer">
-        <item name="android:orientation">vertical</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
+    <!-- login & sign_up -->
+    <style name="Container.Login">
         <item name="android:gravity">center</item>
     </style>
 
@@ -105,7 +109,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">60sp</item>
         <item name="android:textColor">@color/colorPrimary</item>
-        <item name="android:text">@string/app_short_name</item>
+        <item name="android:text">@string/app_name</item>
         <item name="android:fontFamily">@font/aldrich</item>
         <item name="android:layout_marginBottom">50dp</item>
     </style>
@@ -147,6 +151,11 @@
     <style name="TextButton.Label">
         <item name="android:textColor">@color/colorGeneralText</item>
         <item name="android:layout_marginTop">30dp</item>
+    </style>
+
+    <!-- b_list_add -->
+    <style name="Container.BListAdd">
+        <item name="android:gravity">center_horizontal</item>
     </style>
 
 </resources>

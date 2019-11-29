@@ -3,6 +3,8 @@ package io.github.blist;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -42,7 +44,8 @@ public class BListActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.add) {
-            return true;
+            Intent i = new Intent(getBaseContext(), BListAddActivity.class);
+            startActivity(i);
         }
 
         return super.onOptionsItemSelected(item);
