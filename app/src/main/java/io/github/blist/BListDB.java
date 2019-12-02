@@ -12,7 +12,7 @@ import java.util.Date;
 import java.util.HashMap;
 
 /* Modified at
-    Nov 29, 2019 */
+    Dec 2, 2019 */
 public class BListDB {
 
     public static final String DB_NAME = "b_list_db";
@@ -92,6 +92,31 @@ public class BListDB {
 
         Cursor cursor = db.rawQuery("SELECT id, title, date, budget, completed FROM blist " +
                 "ORDER BY date ASC", null );
+
+        while (cursor.moveToNext()) {
+            HashMap<String, String> map = new HashMap<>();
+            map.put("id", cursor.getString(0));
+            map.put("title", cursor.getString(1));
+            map.put("date", cursor.getString(2));
+            map.put("budget", cursor.getString(3));
+            map.put("completed", cursor.getString(4));
+            data.add(map);
+        }
+        if (cursor != null) {
+            cursor.close();
+            closeDB();
+        }
+
+        return data;
+    }
+
+    public ArrayList<HashMap<String, String>> readCompletedBList() {
+
+        openReadableDB();
+        ArrayList<HashMap<String, String>> data = new ArrayList<>();
+
+        Cursor cursor = db.rawQuery("SELECT id, title, date, budget, completed FROM blist " +
+                "WHERE completed = 'true' ORDER BY date ASC", null );
 
         while (cursor.moveToNext()) {
             HashMap<String, String> map = new HashMap<>();

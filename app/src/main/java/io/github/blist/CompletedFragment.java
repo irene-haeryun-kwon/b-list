@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /* Modified at
-    Nov 29, 2019 */
+    Dec 2, 2019 */
 public class CompletedFragment extends Fragment {
 
     private BListDB db;
@@ -36,7 +36,7 @@ public class CompletedFragment extends Fragment {
     }
 
     private void updateView() {
-        ArrayList<HashMap<String, String>> data = db.readBList();
+        ArrayList<HashMap<String, String>> data = db.readCompletedBList();
 
         int res = R.layout.b_list_details;
         String[] from = {"title", "date", "budget"};
