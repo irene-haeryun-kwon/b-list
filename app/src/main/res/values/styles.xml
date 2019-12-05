@@ -1,6 +1,6 @@
 <resources>
 
-    <!-- Modified at Nov 29, 2019 -->
+    <!-- Modified at Dec 5, 2019 -->
     <!-- App theme -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>

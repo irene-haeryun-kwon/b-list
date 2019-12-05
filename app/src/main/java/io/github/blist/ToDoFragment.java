@@ -5,13 +5,19 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 /* Modified at
-    Nov 29, 2019 */
+    Dec 5, 2019 */
 public class ToDoFragment extends Fragment {
 
     private BListDB db;
@@ -31,6 +37,12 @@ public class ToDoFragment extends Fragment {
 
         lv = v.findViewById(R.id.to_do_listview);
         db = new BListDB(getActivity());
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View v, int i, long l) {
+            }
+        });
 
         updateView();
     }
