@@ -12,7 +12,7 @@ import java.util.Date;
 import java.util.HashMap;
 
 /* Modified at
-    Dec 2, 2019 */
+    Dec 5, 2019 */
 public class BListDB {
 
     public static final String DB_NAME = "b_list_db";
@@ -91,7 +91,7 @@ public class BListDB {
         ArrayList<HashMap<String, String>> data = new ArrayList<>();
 
         Cursor cursor = db.rawQuery("SELECT id, title, date, budget, completed FROM blist " +
-                "ORDER BY date ASC", null );
+                "WHERE completed = '0' ORDER BY date ASC", null );
 
         while (cursor.moveToNext()) {
             HashMap<String, String> map = new HashMap<>();
@@ -116,7 +116,7 @@ public class BListDB {
         ArrayList<HashMap<String, String>> data = new ArrayList<>();
 
         Cursor cursor = db.rawQuery("SELECT id, title, date, budget, completed FROM blist " +
-                "WHERE completed = 'true' ORDER BY date ASC", null );
+                "WHERE completed = '1' ORDER BY date ASC", null );
 
         while (cursor.moveToNext()) {
             HashMap<String, String> map = new HashMap<>();
@@ -133,6 +133,24 @@ public class BListDB {
         }
 
         return data;
+    }
+
+    public void updateCompletedBList(int id) throws Exception {
+
+        openWritableDB();
+        ContentValues cv = new ContentValues();
+        cv.put("completed", true);
+
+        String selection = "id=" + id;
+
+        long nResult = db.update("blist", cv, selection, null);
+
+        if (nResult == -1) {
+            throw new Exception("No Data");
+        }
+
+        closeDB();
+
     }
 
     public void deleteAllBList() throws Exception {

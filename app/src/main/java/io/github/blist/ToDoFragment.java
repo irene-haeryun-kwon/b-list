@@ -1,7 +1,11 @@
 package io.github.blist;
 
+import android.content.DialogInterface;
+import android.os.Build;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,10 +45,42 @@ public class ToDoFragment extends Fragment {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View v, int i, long l) {
+                Map<String, Object> map = (Map<String, Object>) lv.getItemAtPosition(i);
+                final String title = (String) map.get("title");
+                final int bListId = Integer.valueOf((String) map.get("id"));
+
+                new MaterialAlertDialogBuilder(getActivity())
+                        .setMessage("Complete the task " + title + "?")
+                        .setPositiveButton("Complete", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                completeBList(bListId);
+
+                                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                                if (Build.VERSION.SDK_INT >= 26) {
+                                    ft.setReorderingAllowed(false);
+                                }
+                                ft.detach(ToDoFragment.this).attach(ToDoFragment.this).commit();
+                            }
+                        })
+                        .setNegativeButton("Cancel", null)
+                        .show();
             }
         });
 
         updateView();
+    }
+
+    private void completeBList(int bListId) {
+        int id = bListId;
+
+        if (!String.valueOf((Integer)id).isEmpty()) {
+            try {
+                db.updateCompletedBList(id);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private void updateView() {
