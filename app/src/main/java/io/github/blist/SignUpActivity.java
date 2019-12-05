@@ -7,13 +7,18 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 /* Modified at
-    Nov 29, 2019 */
+    Dec 5, 2019 */
 public class SignUpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_up);
+    }
+
+    public void onSignUpButtonClick(View v) {
+        Intent i = new Intent(getBaseContext(), BListActivity.class);
+        startActivity(i);
     }
 
     public void onLoginTextButtonClick(View v) {

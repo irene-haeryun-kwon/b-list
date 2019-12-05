@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- Modified at Nov 29, 2019 -->
+<!-- Modified at Dec 5, 2019 -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/Container.Login">
@@ -45,7 +45,8 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/sign_up_button"
         android:text="Sign Up"
-        style="@style/LoginButton" />
+        style="@style/LoginButton"
+        android:onClick="onSignUpButtonClick" />
 
     <TextView
         android:text="Already have an account?"
