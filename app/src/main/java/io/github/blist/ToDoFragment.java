@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.Toast;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
@@ -61,6 +60,7 @@ public class ToDoFragment extends Fragment {
                                     ft.setReorderingAllowed(false);
                                 }
                                 ft.detach(ToDoFragment.this).attach(ToDoFragment.this).commit();
+                                getActivity().recreate();
                             }
                         })
                         .setNegativeButton("Cancel", null)
